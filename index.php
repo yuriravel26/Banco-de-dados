@@ -17,9 +17,6 @@
                 <li>
                     <a href="project.html">Projeto</a>
                 </li>
-                <li>
-                    <a href="contact.html">Contato</a>
-                </li>
             </ul>
         </nav>
     
