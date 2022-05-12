@@ -61,6 +61,14 @@
                     sou estudante de ciencias e tecnologias na Universidade Federal do Rio Grande do Norte. 
                     
                 </p>
+                <section class="Antonio">
+                    <h1 id="antonio">Antonio Laurentino</h1>
+                    <h2> Estudante de C&T</h2>
+                    <h3>Sobre mim</h3>
+                        <p>
+                            Me chamo Antonio Laurentino, tenho 19 anos, nasci e moro em Natal/RN.
+                            Estudo Ciências e Tecnologia na UFRN.
+                        </p>
             </section>
         </main>
     </div>
