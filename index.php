@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.html">Sobre fdsfsdfsd</a>
+                    <a href="index.html">Sobre</a>
                 </li>
                 <li>
                     <a href="project.html">Projeto</a>
