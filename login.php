@@ -54,7 +54,7 @@
         <button>Enviar</button>
         <nav>
             <ul>
-                    <a href="registro.html">Registre-se</a>
+                    <a href="registro.php">Registre-se</a>
             </ul>
         </nav>
     </div>
