@@ -7,11 +7,13 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
+        $senha = $_POST['senha'];
         $sexo = $_POST['genero'];
         $data_nasc = $_POST['data_nascimento'];
+        
 
-        $result = mysqli_query($conn, "INSERT INTO bdweb(nome,email,telefone,sexo,data_nasc)
-        VALUES ('$nome','$email','$telefone','$sexo','$data_nasc')");
+        $result = mysqli_query($conn, "INSERT INTO bdweb(nome,email,telefone,senha,sexo,data_nasc)
+        VALUES ('$nome','$email','$telefone','senha','$sexo','$data_nasc')");
     }
 
 ?>
@@ -113,6 +115,11 @@
                 <div class="inputBox">
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="senha" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">senha</label>
                 </div>
                 <p>Sexo:</p>
                 <input type="radio" id="feminino" name="genero" value="feminino" required>
