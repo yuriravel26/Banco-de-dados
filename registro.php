@@ -1,3 +1,19 @@
+<?php
+
+    if(isset($_POST['submit'])){
+
+        include_once('conexao.php');
+
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+        $sexo = $_POST['genero'];
+        $data_nasc = $_POST['data_nascimento'];
+
+        $result = mysqli_query($conn)
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
