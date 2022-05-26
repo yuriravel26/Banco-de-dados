@@ -10,7 +10,8 @@
         $sexo = $_POST['genero'];
         $data_nasc = $_POST['data_nascimento'];
 
-        $result = mysqli_query($conn)
+        $result = mysqli_query($conn, "INSERT INTO bdweb(nome,email,telefone,sexo,data_nasc)
+        VALUES ('$nome','$email','$telefone','$sexo','$data_nasc')");
     }
 
 ?>
