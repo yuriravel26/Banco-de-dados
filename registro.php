@@ -13,7 +13,7 @@
         
 
         $result = mysqli_query($conn, "INSERT INTO bdweb(nome,email,telefone,senha,sexo,data_nasc)
-        VALUES ('$nome','$email','$telefone','senha','$sexo','$data_nasc')");
+        VALUES ('$nome','$email','$telefone','$senha','$sexo','$data_nasc')");
     }
 
 ?>
@@ -118,7 +118,7 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="senha" name="senha" id="senha" class="inputUser" required>
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
                     <label for="senha" class="labelInput">senha</label>
                 </div>
                 <p>Sexo:</p>
