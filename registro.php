@@ -111,7 +111,6 @@
                 <input type="date" name="data_nascimento" id="data_nascimento" required>
                 <br><br>
                 <input type="submit" name="submit" id="submit">
-            </fieldset>
         </form>
     </div>
 </body>
