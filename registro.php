@@ -12,7 +12,7 @@
         $data_nasc = $_POST['data_nascimento'];
         
 
-        $result = mysqli_query($conexao, "INSERT INTO login(nome,email,telefone,senha,sexo,data_nasc)
+        $result = mysqli_query($conexao, "INSERT INTO bdweb(nome,email,telefone,senha,sexo,data_nasc)
         VALUES ('$nome','$email','$telefone','$senha','$sexo','$data_nasc')");
     }
 

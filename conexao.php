@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "login";
+$dbname = "bdweb";
 
 // Create connection
 $conexao = new mysqli($servername, $username, $password, $dbname);
