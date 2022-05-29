@@ -7,12 +7,12 @@ $dbname = "bdweb";
 // Create connection
 $conexao = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if ($conexao->connect_error) {
+  die("Connection failed: " . $conexao->connect_error);
 }
 
 $sql = "SELECT id, email FROM usuario";
-$result = $conn->query($sql);
+$result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -22,5 +22,5 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
-$conn->close();
+$conexao->close();
 ?>
