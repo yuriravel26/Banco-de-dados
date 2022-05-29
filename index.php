@@ -12,10 +12,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.html">Sobre</a>
+                    <a href="index.php">Sobre</a>
                 </li>
                 <li>
-                    <a href="project.html">Projeto</a>
+                    <a href="project.php">Projeto</a>
                 </li>
             </ul>
         </nav>

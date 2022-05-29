@@ -20,11 +20,31 @@
             border-radius: 15px;
             color: white;
         }
-        input{
-            padding: 15px;
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
             border: none;
+            border-bottom: 1px solid white;
             outline: none;
+            color: white;
             font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
         }
         button{
             background-color: dodgerblue;
@@ -47,10 +67,16 @@
 <body>
     <div class="login">
         <h1>Login</h1>
-        <input type="text" placeholder="Nome">
+        <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
         <br><br>
-        <input type="password" placeholder="Senha">
-        <br><br>
+        <div class="inputBox">
+        <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">senha</label>
+                </div>
+                <br>
         <button>Enviar</button>
         <nav>
             <ul>
