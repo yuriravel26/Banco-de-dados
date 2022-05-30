@@ -1,27 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "listas_cet";
 
-$mysqli = new mysqli($servername, $username, $password, $dbname);
+$usuario = 'root';
+$senha = '';
+$database = 'login';
+$host = 'localhost';
 
-if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
+$mysqli = new mysqli($host, $usuario, $senha, $database);
+
+if($mysqli->error) {
+    die("Falha ao conectar ao banco de dados: " . $mysqli->error);
 }
+else{
+    echo "Conexao ok";
 
-$sql = "SELECT * FROM usuario";
-$result = $mysqli->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " -Nome: " . $row["nome"]. " " . "- email: " . $row["email"]."<br>";
-  }
-} else {
-  echo "0 results";
 }
-$mysqli->close();
-
-
 ?>
