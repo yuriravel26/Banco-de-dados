@@ -16,7 +16,7 @@
         $data_nasc = $_POST['data_nascimento'];
         
 
-        $result = mysqli_query($conexao, "INSERT INTO listas_cet(nome,email,telefone,senha,sexo,data_nascimento)
+        $result = mysqli_query($mysqli, "INSERT INTO listas_cet(nome,email,telefone,senha,sexo,data_nascimento)
         VALUES ('$nome','$email','$telefone','$senha','$sexo','$data_nascimento')");
     }
 
