@@ -1,5 +1,9 @@
 <?php
 
+    if(!isset($_SESSION)) {
+    session_start();
+    }
+
     if(isset($_POST['submit'])){
 
         include_once('conexao.php');
@@ -8,12 +12,12 @@
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $senha = $_POST['senha'];
-        $sexo = $_POST['genero'];
+        $sexo = $_POST['sexo'];
         $data_nasc = $_POST['data_nascimento'];
         
 
-        $result = mysqli_query($conexao, "INSERT INTO bdweb(nome,email,telefone,senha,sexo,data_nasc)
-        VALUES ('$nome','$email','$telefone','$senha','$sexo','$data_nasc')");
+        $result = mysqli_query($conexao, "INSERT INTO listas_cet(nome,email,telefone,senha,sexo,data_nascimento)
+        VALUES ('$nome','$email','$telefone','$senha','$sexo','$data_nascimento')");
     }
 
 ?>
@@ -99,7 +103,7 @@
 </head>
 <body>
     <div class="box">
-        <form action="">
+        <form action="" method="POST">
                 <h1>Registro</h1>
                 <br>
                 <div class="inputBox">
