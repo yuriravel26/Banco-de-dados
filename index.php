@@ -1,83 +1,102 @@
-<?php 
 
-if(!isset($_SESSION)) {
-    session_start();
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="widthgit=device-width, initial-scale=1.0">
-    <title>BD web</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto </title> 
+
+
+
+
+    <style>
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan, yellow);
+
+
+        }
+        .login{
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 50px;
+            border-radius: 15px;
+            color: white;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: deepskyblue;
+        }
+        a{
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
+
+
+<span>
+    <?php
+if(isset($_GET['msg'])) {
+    echo $_GET['msg'].'</br>';
+}
+    ?>
+</span>
+
+<form action="" method= "POST">
+
+    <div class="login">
+        <h1>Olá</h1>
+
+    
             <ul>
-                <li>
-                    <a href="index.php">Sobre</a>
-                </li>
-                <li>
-                    <a href="project.php">Projeto</a>
-                </li>
+        <a href="login.php">Login</a> </br>
+        <a href="cadastro.php">Registre-se</a>
+                    
             </ul>
         </nav>
-    
-        <header>
-            <ul>
-                <div class="start">
-                    <img src="C:\Users\yuri_\OneDrive\Documentos\easy-portfolio\png\Lau.png"></img>
-                    <p>Antonio Laurentino</p>
-                </div>
-                <div class="center">
-                    <img src="C:\Users\yuri_\OneDrive\Documentos\easy-portfolio\png\Alice.png"></img>
-                    <p>Alice Bastos</p>
-                </div>
-                <div class="end">
-                    <img src="C:\Users\yuri_\OneDrive\Documentos\easy-portfolio\png\Yuri.png"></img>
-                    <p>Yuri Ravel</p>
-                </div>
-            </ul>
-        </header>
-
-        <section class="Yuri">
-            <h1>Yuri Ravel</h1>
-            <h2>Estudante de C&T</h2>
-            <h3>Sobre mim</h3>
-                <p>
-                    Me chamo Yuri Ravel, tenho 20 anos e moro na cidade de Natal/RN, 
-                    sou estudante de ciencias e tecnologias na Universidade Federal do Rio Grande do Norte. 
-                    Gosto muito de jogar no computador, principalmente jogos de FPS e estou a treinar sobre programação para minha
-                    carreira academica.
-                </p>
-            </section>
-        
-        <section class="Alice">
-            <h1 id="alice">Alice Bastos</h1>
-            <h2>Estudante de C&T</h2>
-            <h3>Sobre mim</h3>
-                <p>
-                    Me chamo Alice Bastos, tenho 29 anos e moro na cidade de Natal/RN, 
-                    sou estudante de ciencias e tecnologias na Universidade Federal do Rio Grande do Norte. 
-                    
-                </p>
-                <section class="Antonio">
-                    <h1 id="antonio">Antonio Laurentino</h1>
-                    <h2> Estudante de C&T</h2>
-                    <h3>Sobre mim</h3>
-                        <p>
-                            Me chamo Antonio Laurentino, tenho 19 anos, nasci e moro em Natal/RN.
-                            Estudo Ciências e Tecnologia na UFRN.
-                        </p>
-            </section>
-        </main>
     </div>
-
-    
+    </form>
 </body>
 </html>

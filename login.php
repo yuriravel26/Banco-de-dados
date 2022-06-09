@@ -1,46 +1,6 @@
-<?php
-include('conexao.php');
 
-if(isset($_POST['email']) || isset ($_POST['senha'])) {
 
-    if(strlen($_POST['email']) == 0) {
-      echo "Preencha seu e-mail";
-    }else if (strlen($_POST['senha']) == 0) {
-      echo "Preencha sua senha";
-    } else {
-  
-        /*
-        //função que limpa esse campo para segurança
-      $email = $mysqli-> real_escape_string($_POST['email']);
-      $senha = $mysqli-> real_escape_string($_POST['senha']);
-      */
-  
-      $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
-      $sql_query = $mysqli->query($sql_code) or die ("Falhaaaaa na execução do código SQL: ". $mysqli->error);
-      
-      $quantidade = $sql_query->num_rows;
-      
-      if($quantidade == 1){
-  
-        $usuario = $sql_query->fetch_assoc();
-  
-  if (!isset($_SESSION)) {
-    session_start();
-  }
-        $_SESSION['id']=$usuario['id'];
-        $_SESSION['nome']=$usuario['nome'];
-  
-        header("Location: index.php");
 
-    } else {
-        echo "Falha ao logar! E-mail ou senha incorretos";
-  
-    }
-      
-  }
-  }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,12 +10,20 @@ if(isset($_POST['email']) || isset ($_POST['senha'])) {
     <title>Projeto </title> 
 
 
-
-
     <style>
         body{
+
             font-family: Arial, Helvetica, sans-serif;
             background-image: linear-gradient(45deg, cyan, yellow);
+
+            <span>
+        <?php
+            if($_GET['msg']) {
+                echo $_GET['msg'].'</br>';
+            }
+        ?>
+    </span>
+
         }
         .login{
             background-color: rgba(0, 0, 0, 0.9);
@@ -113,7 +81,9 @@ if(isset($_POST['email']) || isset ($_POST['senha'])) {
 </head>
 <body>
 
-<form action="" method= "POST">
+
+
+<form action="validar_usuario.php" method= "POST">
 
     <div class="login">
         <h1>Login</h1>
@@ -131,12 +101,12 @@ if(isset($_POST['email']) || isset ($_POST['senha'])) {
                 </div>
                 <br>
 
-
-
+    
         <button type="submit">Enviar</button>
         <nav>
             <ul>
-                    <a href="registro.php">Registre-se</a>
+           
+                    <a href="cadastro.php">Registre-se</a>
             </ul>
         </nav>
     </div>
